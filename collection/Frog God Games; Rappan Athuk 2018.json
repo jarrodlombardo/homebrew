@@ -31,6 +31,149 @@
 		"dateLastModified": 1785710198,
 		"_dateLastModifiedHash": "7ef5e44651"
 	},
+	"disease": [
+		{
+			"name": "Bubonic Plague",
+			"source": "RA2018",
+			"page": 653,
+			"entries": [
+				"The first time a creature approaches within 5 ft. of a creature carrying the bubonic plague, and every hour in proximity thereafter, it must succeed on a DC 15 Constitution saving throw. Onset is after 1d4 days, after which the victim becomes contagious. The victim loses 1d4 points of Constitution and 1 point of Charisma per day thereafter; they may attempt a DC 15 Constitution saving throw each day to avoid the ability damage; two successful saving throws in a row defeats the disease. If the victim is still alive after 5 failed saving throws, they become incapacitated from cramps and pain. Once the victim is no longer ill, the ability loss heals normally at one point of each ability after every long rest."
+			]
+		},
+		{
+			"name": "Goblin Gout",
+			"source": "RA2018",
+			"page": 653,
+			"entries": [
+				"In goblinoid creatures, this disease causes a level of rabid response, making them likely to bite instead of using their weapons, and irrationally brave in their attacks. They make all attacks with advantage, but all attacks against them have advantage. On any combat round, a diseased goblinoid is 50% likely to attempt to bite its adversary rather than use any other attack. Any creature bitten by an infected goblinoid must succeed on a DC 15 Constitution saving throw or contract the disease. After an incubation period of 1d3 days, the victim develops the symptoms of the disease. If the victim is not goblinoid, the creature develops aching joints and stiffness. The victim's movement is reduced by 20 ft. (5 ft. minimum) and they have disadvantage on attack rolls and Dexterity saving throws and skill checks. The victim may attempt a DC 15 Constitution saving throw after any long rest. With two consecutive passes, they shake off the effects of the disease."
+			]
+		},
+		{
+			"name": "The Grunge",
+			"source": "RA2018",
+			"page": 653,
+			"entries": [
+				"This disease is spread through contact with goblin-infested waste. It causes blurriness of vision and a slight palsy. Any creature making contact with infected material must succeed on a DC 14 Constitution saving throw or become infected. One hour later, the disease sets in, and the creature has a -1 penalty on all to-hit rolls for 24 hours. A creature who rolls a 1 or lower on their saving throw must make an additional saving throw after 24 hours. A creature who fails this second saving throw permanently loses 1 point of strength. The strength can be regained only with a {@spell greater restoration|PHB} or a {@spell wish|PHB} spell."
+			]
+		},
+		{
+			"name": "Hanta Virus",
+			"source": "RA2018",
+			"page": 653,
+			"entries": [
+				"The disease is typically caught from contact with rodents and rodent waste. Normally a Constitution saving throw is required to prevent contagion, with the DC dependent on the amount of contagious material contacted and the method of contact. Hanta virus incubates 1d8 + 7 days before beginning its deadly course. For the first four days after the incubation stage, a creature infected with this disease must make a DC 16 Constitution saving throw every 24 hours. The victim acquires one level of exhaustion for each failure. The exhaustion cannot be removed while the disease persists. Starting on the fifth day, failed saving throws indicate that the victim loses 2d10 hit points from their maximum as well as gaining a level of exhaustion. Once the disease has been cured, the exhaustion can be cured with rest or by magic, and the loss of maximum hit points is restored after a long rest. Unless cured by magic, this disease is ultimately fatal."
+			]
+		},
+		{
+			"name": "Hemophilia",
+			"source": "RA2018",
+			"page": 654,
+			"entries": [
+				"Hemophilia is typically a genetic disorder and as such is normally only acquired through magical means. A creature who has this disease loses 1 hp per round until magically healed after suffering any bludgeoning, piercing, or slashing damage. The damage lost per round is cumulative with additional sources of damage."
+			]
+		},
+		{
+			"name": "Leech Fever",
+			"source": "RA2018",
+			"page": 654,
+			"entries": [
+				"This anemia-causing disease comes from the bite of infected leeches. It is otherwise not contagious. Anybody bitten by an infected leech must make a DC 16 Constitution saving throw or contract the disease. The disease incubates for 1d3 days before causing symptoms. At this point, the anemia causes two levels of exhaustion. The exhaustion cannot be eliminated while the disease is still active. After the symptoms have developed, the victim may attempt a DC 16 Constitution saving throw after every long rest. Two consecutive successful saving throws indicate the victim has thrown off the disease. The exhaustion can then be removed normally. {@spell lesser Restoration|PHB} or similar magical healing eliminates the disease at any point."
+			]
+		},
+		{
+			"name": "Mummy Rot",
+			"source": "RA2018",
+			"page": 654,
+			"entries": [
+				"Mummy rot first causes desiccation and then a slow decomposition. Vision goes early on as the body loses fluids, followed by ever-increasing weakness. Death comes late, well after the victim is completely incapacitated from weakness.",
+				"When a humanoid is exposed to the disease, either by magical means or through inhaling the dust of a former victim, the creature must make a Constitution saving throw. The DC for the saving throw depends on the power of the curse for magical contagion, and is 14 for breathing grave dust.",
+				"Mummy rot typically manifests immediately with a strong level of thirst. The victim must double its water consumption or gain one level of exhaustion. Every 24 hours, the victim must make a DC 17 Constitution saving throw. Each failure adds one symptom from the table below until death occurs. Two consecutive passes halts the disease but does not remove existing symptoms. {@spell remove curse|PHB} destroys the disease and heals all damage. A single casting of {@spell Lesser Restoration|PHB} removes the most recent symptom still present.",
+				"Symptoms in order of appearance based on number of failed saving throws",
+				{
+					"name": "Mummy Rot Symptoms",
+					"source": "RA2018",
+					"type": "table",
+					"page": 654,
+					"rows": [
+						[
+							"0",
+							"Thirst — double water consumption or gain one level of exhaustion"
+						],
+						[
+							"1",
+							"Gain one level exhaustion and lose 1d4 points of Charisma*"
+						],
+						[
+							"2",
+							"Vision reduced by 30 ft."
+						],
+						[
+							"3",
+							"Gain one level exhaustion and lose 1d4 points of Charisma*"
+						],
+						[
+							"4",
+							"Blind"
+						],
+						[
+							"5",
+							"Gain one level exhaustion and lose 1d4 points of Charisma*"
+						],
+						[
+							"6",
+							"Gain one level exhaustion and Charisma is now 1"
+						],
+						[
+							"7",
+							"Lose 2d6 each of Constitution, Dexterity, and Strength*"
+						],
+						[
+							"8",
+							"Constitution, Dexterity, and Strength are now 1"
+						],
+						[
+							"9+",
+							"Lose 1 hp for each failed save until death"
+						]
+					]
+				},
+				"*Charisma does not drop below 1. If Constitution, Dexterity, or Strength drop to 0, the victim is dead."
+			]
+		},
+		{
+			"name": "Pestilence",
+			"source": "RA2018",
+			"page": 654,
+			"entries": [
+				"The pestilence is typically caught from contact with bodily fluids of a creature carrying the disease. Every round that a creature is in contact with an infected creature or some of its fluid, it must succeed on a DC 14 Constitution saving throw or contract the disease. Anyone infected will begin losing hit points at a rate of one per hour until death. A DC 10 Constitution saving throw is allowed each hour to avoid the hit point loss for that hour, but the process continues afterwards. Magical healing increases the victim's hit points, but the progress of the disease continues after the curing. {@spell Lesser restoration|PHB} completely removes the disease and returns the victim back to health, although it does not restore the lost hit points. If the victim dies from the course of the disease, the body rises as a {@creature plague zombie|RA2018} in 1d4+1 rounds. A sprinkling of {@item holy water|PHB} or a {@spell lesser restoration|PHB} spell cast on the body prevents this from happening. The body may be raised from the dead normally, but not while it is still “alive” as a {@creature plague zombie|RA2018}."
+			]
+		},
+		{
+			"name": "Slimy Doom",
+			"source": "RA2018",
+			"page": 654,
+			"entries": [
+				"Slimy Doom is caught from contact with the remains of a creature that dies of Tsathoggan Rotting Disease. For each round of contact with dissolved flesh of such a victim, a creature must succeed on a DC 16 Constitution saving throw or succumb to the disease with no initial incubation period. Slimy doom turns a person into goo from the inside out. Each day, the victim must pass a DC 16 Constitution saving throw or lose 1d4 points of their Constitution. At 0 Constitution, they are nothing more than a fleshy bag of pus and bloody foam. Those who are cured by spell or who pass two daily saving throws in a row, must make one additional saving throw for each day they took Constitution damage. If these saving throws fail, the victim has permanently lost a point of Constitution per failed saving throw."
+			]
+		},
+		{
+			"name": "Tsathoggan Rotting Disease",
+			"source": "RA2018",
+			"page": 654,
+			"entries": [
+				"This disease comes from a curse and is not contagious. A creature so cursed must make a DC 14 Charisma saving throw to resist the allure of Tsathhogga. Once afflicted, the victim must succeed on a DC 16 Constitution saving throw every 24 hours or lose 1d4 points of Constitution as their insides turn to goo. Passing two consecutive saving throws halts the disease and the ability point damage heals normally at one point per long rest or can be cured magically."
+			]
+		},
+		{
+			"name": "Zombie Rot",
+			"source": "RA2018",
+			"page": 634,
+			"entries": [
+				"A creature who takes a bite or claw attack from a {@creature plague zombie|RA2018}, or who is within 15 feet of a {@creature plague zombie|RA2018} when it drops to 0 hit points, must make a {@dc 13} Constitution saving throw. On a failed save, the creature contracts zombie rot.",
+				"While it has zombie rot, the creature cannot regain hit points except via magical means, and it has vulnerability to slashing damage as its flesh rots. At the end of each long rest after being infected, the creature's maximum hit points is reduced by {@dice 1d6} and it can repeat the saving throw, ending zombie rot on a success. Any reduction to the creature's hit point maximum is permanent until the zombie rot has been cured. The reduction ends after the creature's next long rest after being cured. If this reduction drops the creature to 0 hit points, the creature dies and rises as a plague zombie in {@dice 1d4} hours."
+			]
+		}
+	],
 	"item": [
 		{
 			"name": "Alchemy Jug",
@@ -2975,6 +3118,88 @@
 						"A simple hammer and chisel coated in the blood of a unicorn and wielded by an innocent child can crack the stone, thereby killing the child (irrevocably and forever)."
 					]
 				}
+			]
+		}
+	],
+	"hazard": [
+		{
+			"name": "Gas Spore",
+			"source": "RA2018",
+			"page": 637,
+			"entries": [
+				"From a distance, the gas spore is likely to be mistaken for an eye tyrant, using its mimicry to lure would-be victims to their doom. A successful {@dc 20} Wisdom ({@skill Perception}) check discerns the true nature of the gas spore. The gas spore has a fly speed of 10 feet with average maneuverability.",
+				"When a creature comes within 10 feet of a gas spore, it must make a successful {@dc 13} Constitution saving throw or be {@condition poisoned|PHB}. The poisonlasts until it is cured. Every 24 hours, the {@condition poisoned|PHB} creature must succeed on a {@dc 13} Constitution saving throw or the target's Constitution score is reduced by {@dice 1d4}. The target dies if this effect reduces its Constitution to 0. A creature slain in this manner will expel {@dice 2d4} gas spores from its body the next turn after it dies.",
+				"The Constitution damage cannot be regained while the creature remains {@condition poisoned|PHB}. A {@spell lesser restoration|PHB} spell will cure the condition. Once cured, the creature regains the lost Constitution after completing a long rest.",
+				"If a gas spore is struck for a single point of damage, it explodes in a violent blast of caustic gas. All creatures within a 30-foot radius centered on the spore must make a {@dc 15} Dexterity saving throw, taking 21 ({@damage 6d6}) poison damage on a failure, or half as much damage on a successful one."
+			]
+		},
+		{
+			"name": "Green Slime",
+			"source": "RA2018",
+			"page": 637,
+			"entries": [
+				"Green slime is corrosive, slick, and adhesive, sticking to anything it comes into contact with. Metal, flesh, organic material is especially vulnerable to the corrosive properties of the slime. It is often found in warm, humid caverns and ruins, and will be noticeable as it clings to ceilings, walls, and covers floors, usually in 5-foot squares.",
+				"Green slime can detect movement within 30 feet and will drop on unsuspecting victims when they are below it; it is unable to move so much depend on unwitting prey. If a creature is aware of the presence of the slime, they can attempt to avoid the hazard by succeeding on a {@dc 10} Dexterity saving throw.",
+				"The green slime secretes acid and does 5 ({@damage 1d10}) acid damage to any creature it comes into contact with. This damage continues on each of the creature's turns until it uses an action to remove or destroy the slime. Much like its more evolved ooze relatives, the green slime is doubly caustic to nonmagical wood and metal, doing 11 ({@damage 2d10}) acid damage against objects of these types.",
+				"Green slime is vulnerable to and will be destroyed by fire, cold, radiant damage, sunlight or any disease curing magic."
+			]
+		},
+		{
+			"name": "Leeches",
+			"source": "RA2018",
+			"page": 638,
+			"entries": [
+				"A hungry leech is a determined predator that slithers underneath loose clothing in search of bare flesh. Characters wading through murky waters or trudging through damp earth may spot an approaching leech with a successful {@dc 15} Wisdom ({@skill Perception}) check or if they have passive Wisdom ({@skill Perception}) of 15 or more. If the check succeeds, the character can squash the leech or collect it for another purpose.",
+				"An undetected leech latches onto the creature and searches for an opening to grant it access to the target's exposed skin. When it reaches its destination, it begins feeding. Leech bites do not evoke immediate pain, so there is a good chance that the leech's dining goes unnoticed. Still, a successful {@dc 10} Constitution saving throw alerts the character to the animal's uninvited presence. A character aware of the chewing sensation instantly knows where the discomfort is coming from on his body. If he can see the attachment site, he can kill or remove the leech. A creature that fails the preceding Constitution save remains unaware of the leech's presence unless he surreptitiously finds it during a visual inspection of his skin.",
+				"The threat from leeches is the anticoagulant they secrete when feeding. Improperly detaching a leech can result in profuse bleeding. The best method for removing a leech can be determined by a character with a successful {@dc 10} Intelligence check. The removal of the leech can be accomplished with a successful {@dc 10} Wisdom ({@skill Medicine}) check. Failure to properly remove the leech results in the host taking 1 necrotic damage per round for {@dice 1d4} rounds."
+			]
+		},
+		{
+			"name": "Mold, Brown",
+			"source": "RA2018",
+			"page": 638,
+			"entries": [
+				"Brown mold is an ectotherm and feeds on the warmth of the environment surrounding it. When within 30 feet of brown mold, the temperature is noticeably colder, often to the point of freezing depending on the size of the brown mold patch. It is common for brown mold to cover a 10-foot square, but it isn't unusual for patches to be much larger.",
+				"Creatures that come within 10 feet of brown mold, or start their turn within 10 feet of the mold must succeed on a {@dc 12} Constitution saving throw. A failed save results in 22 ({@damage 4d10}) cold damage, or half as much on a successful saving throw. Exposure to fire causes the brown mold to rapidly expand and grow in the direction of the fire.",
+				"Exposure to cold will instantly destroy brown mold."
+			]
+		},
+		{
+			"name": "Mold, Yellow",
+			"source": "RA2018",
+			"page": 638,
+			"entries": [
+				"Patches of yellow mold are most commonly encountered in dark, damp locations, and grows in 5-foot square and larger patches. If disturbed, the yellow mold releases a cloud of spores in a 10-foot radius around itself. Creatures caught in the spore cloud take 11 ({@damage 2d10}) poison damage and must succeed on a {@dc 15} Constitution saving throw or be {@condition poisoned|PHB} for 1 minute. The creature takes an additional 5 ({@damage 1d10}) poison damage at the start of each of their turns and can repeat the saving throw at the end of each of their turns, ending the effect ton itself on a successful save.",
+				"Yellow mold is instantly destroyed by fire damage or sunlight."
+			]
+		},
+		{
+			"name": "Memory Moss",
+			"source": "RA2018",
+			"page": 638,
+			"entries": [
+				"Memory moss appears as a 5-foot square patch of black moss. It grows in temperate or warm climates and is sometimes encountered in subterranean realms. Memory moss cannot abide the cold or the arid clime of the desert and is never encountered in such environments.",
+				"When a living creature moves within 60 feet of a patch of memory moss, it attacks by attempting to steal that creature's memories. It can target a single creature each round. A targeted creature must succeed on a {@dc 14} Wisdom saving throw or lose all memories from the last 24 hours. This is particularly nasty to spellcasters, who lose all spells prepared within the last 24 hours. (Only those spells actually prepared in the last 24 hours are lost; spells prepared longer than 24 hours ago are not lost.)",
+				"Once a memory moss steals a creature's memories, it sinks back down and does not attack again for one day. If a creature loses its memories to the memory moss, it acts as if affected by a {@spell confusion|PHB} spell for the next {@dice 1d4} hours. Lost memories can be regained by eating the memory moss that absorbed them. Doing so requires a {@dc 11} Constitution saving throw, with failure resulting in the creature being nauseated for {@dice 1d6} minutes and is {@condition poisoned|PHB} until they take a long or short rest."
+			]
+		},
+		{
+			"name": "Rot Grubs",
+			"source": "RA2018",
+			"page": 638,
+			"entries": [
+				"Rot grubs are nauseating parasites that feed on flesh and nest in corpses. Generally, a handful of the grubs infest a single corpse at a time. A {@dc 10} Wisdom ({@skill Perception}) check is enough to notice and avoid the grubs. If the grubs go unnoticed, contact with the corpse results in {@dice 1d6} grubs bursting from the corpse and beginning to burrow into the creature's flesh. The creature must succeed on a {@dc 12} Dexterity saving throw or take 1 piercing damage from each grub and be infested with rot grubs. Within 4 hours, the grubs will have started to burrow toward the host's heart, brain, and other internal organs, eventually killing the host.",
+				"The host must succeed on a {@dc 15} Constitution saving throw every 4 hours or take 3 ({@damage 1d6}) necrotic damage and the target's Constitution score is reduced by {@dice 1d4} points. The target dies if this reduces their Constitution to 0. Otherwise, the reduction lasts until the infestation is cured.",
+				"The rot grub infestation can be mitigated by applying fire for 3 turns to the point of entry, causing a combined 13 ({@damage 3d8}) fire damage to the host, or by succeeding on a {@dc 15} Wisdom ({@skill Medicine}) check and cutting the grubs out with a sharp instrument, causing an additional 14 ({@damage 4d6}) piercing damage to the host. A greater restoration or {@spell heal|PHB} spell will destroy the grubs, ending the infestation and restoring the lost Constitution."
+			]
+		},
+		{
+			"name": "Twilight Mushrooms",
+			"source": "RA2018",
+			"page": 638,
+			"entries": [
+				"Twilight mushrooms are purplish-black mushrooms about 4 to 6 inches in height, growing in patches of 5-10 mushrooms and are only found in damp, dark underground areas. When these extremely sensitive mushrooms react to vibrations by releasing a cloud of noxious, choking spores. When a creature moves to within 10 feet of the mushrooms for the first time or starts its turn there, it must make a {@dc 12} Constitution saving throw, taking 22 ({@damage 4d10}) poison damage on a failed save, or half as much damage on a successful one.",
+				"Sunlight renders twilight mushrooms dormant, and any amount of cold damage instantly destroys one patch of twilight mushrooms."
 			]
 		}
 	],
