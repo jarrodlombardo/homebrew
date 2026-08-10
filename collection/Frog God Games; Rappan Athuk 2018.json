@@ -974,7 +974,7 @@
 			"ac": 16,
 			"strength": "13",
 			"grantsProficiency": true,
-			"stealth": true,
+			"stealth": false,
 			"entries": [
 				"You are considered proficient with this armor even if you lack proficiency with medium armor. While you wear this black chain mail armor, you have advantage on stealth checks as long you are not in {@quickref Vision and Light||2||bright light}. Once per day, when wearing this armor, you can cast {@spell darkness|PHB}."
 			],
@@ -1379,6 +1379,17 @@
 			]
 		},
 		{
+			"name": "Helm, +2",
+			"source": "RA2018",
+			"rarity": "very rare",
+			"page": 645,
+			"wondrous": true,
+			"bonusAc": "+2",
+			"entries": [
+				"When you are wearing this helm, you gain a {=bonusAc} bonus to your AC."
+			]
+		},
+		{
 			"name": "Helmet of Protection",
 			"source": "RA2018",
 			"page": 645,
@@ -1705,6 +1716,26 @@
 			"wondrous": true,
 			"entries": [
 				"While you wear this mantle, undead creatures have disadvantage on attacks against you."
+			]
+		},
+		{
+			"name": "Mattock of the Titans (6-8)",
+			"source": "RA2018",
+			"page": 646,
+			"rarity": "legendary",
+			"weight": 100,
+			"weaponCategory": "simple",
+			"property": [
+				"2H"
+			],
+			"dmg1": "4d6 + 3",
+			"dmgType": "B",
+			"type": "M",
+			"bonusWeapon": "+3",
+			"entries": [
+				"This digging tool is 10 ft. long and weighs 100 pounds. It can only be used by a Huge or larger creature.",
+				"You can use it to loosen or tumble earthen ramparts at the rate of a 10-ft. cube every 10 minutes or to smash rock at the rate of a 10-ft. cube every hour. If used as a weapon, you gain a +3 bonus to attack rolls. On a hit it does {@damage 4d6 + 3} bludgeoning damage and if the target is",
+				"Large or smaller, the target must succeed on a {@dc 15} Strength saving throw or be knocked {@condition prone|PHB}."
 			]
 		},
 		{
@@ -3324,7 +3355,7 @@
 			"type": "GV|DMG",
 			"requires": [
 				{
-					"weapon": true
+					"dagger": true
 				}
 			],
 			"inherits": {
@@ -3335,26 +3366,6 @@
 				"bonusWeapon": "+2",
 				"entries": [
 					"This weapon is the same as a {@item dagger of venom|PHB} except that you gain a {=bonusWeapon} bonus to attack and damage rolls with it and the poison damage is {@dice 3d10}."
-				]
-			}
-		},
-		{
-			"name": "Helm, +2",
-			"edition": "classic",
-			"type": "GV|DMG",
-			"requires": [
-				{
-					"armor": true
-				}
-			],
-			"inherits": {
-				"namePrefix": "Helm, +2 ",
-				"source": "RA2018",
-				"page": 645,
-				"rarity": "very rare",
-				"bonusAc": "+2",
-				"entries": [
-					"When you are wearing this helm, you gain a {=bonusAc} bonus to your AC."
 				]
 			}
 		},
@@ -3376,30 +3387,7 @@
 				"entries": [
 					"(requires attunement by somebody of lawful good alignment)",
 					"You gain a {=bonusWeapon} bonus to attack and damage rolls with this weapon.",
-					"Against ends and undead, this weapon does an additional {@damage 2d8} radiant damage on a hit."
-				]
-			}
-		},
-		{
-			"name": "Mattock of the Titans (6-8)",
-			"edition": "classic",
-			"type": "GV|DMG",
-			"requires": [
-				{
-					"weapon": true
-				}
-			],
-			"inherits": {
-				"namePrefix": "Mattock of the Titans (6-8) ",
-				"source": "RA2018",
-				"page": 646,
-				"rarity": "legendary",
-				"weight": 100,
-				"bonusWeaponAttack": "+3",
-				"entries": [
-					"This digging tool is 10 ft. long and weighs 100 pounds. It can only be used by a Huge or larger creature.",
-					"You can use it to loosen or tumble earthen ramparts at the rate of a 10-ft. cube every 10 minutes or to smash rock at the rate of a 10-ft. cube every hour. If used as a weapon, you gain a {=bonusWeaponAttack} bonus to attack rolls. On a hit it does {@damage 4d6 + 3} bludgeoning damage and if the target is",
-					"Large or smaller, the target must succeed on a {@dc 15} Strength saving throw or be knocked {@condition prone|PHB}."
+					"Against fiends and undead, this weapon does an additional {@damage 2d8} radiant damage on a hit."
 				]
 			}
 		},
@@ -3538,7 +3526,7 @@
 						"type": "entries",
 						"name": "Curse",
 						"entries": [
-							"You gain a-3 penalty to attack and damage rolls made with this weapon. Once you have become attuned to the weapon, it cannot be removed from your hand. Attacks made with weapons in the other hand are made with disadvantage. The attunement can be removed by a {@spell remove curse|PHB} spell or similar magic."
+							"You gain a -3 penalty to attack and damage rolls made with this weapon. Once you have become attuned to the weapon, it cannot be removed from your hand. Attacks made with weapons in the other hand are made with disadvantage. The attunement can be removed by a {@spell remove curse|PHB} spell or similar magic."
 						]
 					}
 				]
@@ -3565,22 +3553,29 @@
 			}
 		},
 		{
-			"name": "Weapon of Light (one-handed)",
+			"name": "Weapon of Light",
 			"edition": "classic",
 			"type": "GV|DMG",
 			"requires": [
 				{
-					"weapon": true
+					"type": "M"
 				}
 			],
+			"excludes": {
+				"property": [
+					"2H"
+				]
+			},
 			"inherits": {
 				"nameSuffix": " of Light",
 				"source": "RA2018",
 				"page": 653,
 				"rarity": "legendary",
 				"bonusWeaponAttack": "+3",
+				"dmg1": "1d8 + 3",
+				"dmgType": "F",
 				"entries": [
-					"Through a simple act of {@status concentration|PHB}, you can cause this weapon to resize or transform into any one-handed melee weapon desired. The weapon materializes as solidified red light, making {@quickref Vision and Light||2||dim light} in a 5 ft. radius. You have a {=bonusWeaponAttack} bonus to attack rolls with this weapon. Whatever weapon form you choose, the weapon does {@damage 1d8 {=bonusWeaponAttack}} fire damage on a hit."
+					"Through a simple act of concentration, you can cause this weapon to resize or transform into any one-handed melee weapon desired. The weapon materializes as solidified red light, making {@quickref Vision and Light||2||dim light} in a 5 ft. radius. You have a {=bonusWeaponAttack} bonus to attack rolls with this weapon. Whatever weapon form you choose, the weapon does {@damage 1d8 {=bonusWeaponAttack}} fire damage on a hit."
 				]
 			}
 		}
@@ -31961,7 +31956,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item +2 chain mail}"
+						"{@item +2 chain mail|dmg}"
 					]
 				}
 			],
@@ -32547,7 +32542,7 @@
 				{
 					"ac": 17,
 					"from": [
-						"{@item +1 leather armor||+1 leather}"
+						"{@item +1 leather armor|DMG|+1 leather}"
 					]
 				}
 			],
@@ -34470,6 +34465,9 @@
 				"constitution",
 				"dexterity",
 				"wisdom"
+			],
+			"attachedItems": [
+				"ring of spell turning|dmg"
 			]
 		},
 		{
@@ -35502,7 +35500,7 @@
 				{
 					"ac": 19,
 					"from": [
-						"{@item +1 chain mail}",
+						"{@item +1 chain mail|dmg}",
 						"{@item shield|PHB}"
 					]
 				}
@@ -38140,7 +38138,7 @@
 				{
 					"ac": 17,
 					"from": [
-						"{@item +1 studded leather armor||+1 studded leather}"
+						"{@item +1 studded leather armor|DMG|+1 studded leather}"
 					]
 				}
 			],
@@ -38455,7 +38453,7 @@
 				{
 					"ac": 20,
 					"from": [
-						"{@item +2 plate armor||+2 plate}"
+						"{@item +2 plate armor|DMG|+2 plate}"
 					]
 				}
 			],
@@ -38710,7 +38708,7 @@
 					"ac": 22,
 					"from": [
 						"+3 adamantine breastplate",
-						"{@item +1 shield}"
+						"{@item +1 shield|dmg}"
 					]
 				}
 			],
@@ -41408,8 +41406,8 @@
 				{
 					"ac": 21,
 					"from": [
-						"{@item +2 chain mail}",
-						"{@item +1 shield}"
+						"{@item +2 chain mail|dmg}",
+						"{@item +1 shield|dmg}"
 					]
 				}
 			],
@@ -42325,7 +42323,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item +2 chain mail}"
+						"{@item +2 chain mail|dmg}"
 					]
 				}
 			],
@@ -43247,7 +43245,7 @@
 					"ac": 18,
 					"from": [
 						"natural armor",
-						"{@item +1 shield}"
+						"{@item +1 shield|dmg}"
 					]
 				}
 			],
@@ -43615,7 +43613,7 @@
 				{
 					"name": "Invisibility",
 					"entries": [
-						"The night terror and its light magically become {@condition invisible|PHB} until it attacks or until its {@status concentration|PHB} ends (as if {@status concentration||concentrating} on a spell)."
+						"The night terror and its light magically become {@condition invisible|PHB} until it attacks or until its {@status concentration|PHB} ends (as if {@status concentration|PHB|concentrating} on a spell)."
 					]
 				}
 			],
@@ -43953,7 +43951,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item +1 leather armor||+1 leather}",
+						"{@item +1 leather armor|DMG|+1 leather}",
 						"{@item shield|PHB}"
 					]
 				}
@@ -44754,7 +44752,7 @@
 				{
 					"ac": 17,
 					"from": [
-						"{@item +2 chain shirt}"
+						"{@item +2 chain shirt|dmg}"
 					]
 				}
 			],
@@ -47030,7 +47028,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item +1 studded leather armor||+1 studded leather}",
+						"{@item +1 studded leather armor|DMG|+1 studded leather}",
 						"{@item shield|PHB}"
 					]
 				}
@@ -47224,8 +47222,8 @@
 				{
 					"ac": 22,
 					"from": [
-						"{@item +1 plate armor||+1 plate}",
-						"{@item +1 shield}"
+						"{@item +1 plate armor|DMG|+1 plate}",
+						"{@item +1 shield|dmg}"
 					]
 				}
 			],
@@ -47410,7 +47408,7 @@
 				{
 					"ac": 21,
 					"from": [
-						"{@item +1 plate armor||+1 plate}",
+						"{@item +1 plate armor|DMG|+1 plate}",
 						"{@item shield|PHB}"
 					]
 				}
@@ -53272,7 +53270,8 @@
 				"thunder"
 			],
 			"immune": [
-				"fire  poison",
+				"fire",
+				"poison",
 				"radiant"
 			],
 			"conditionImmune": [
@@ -56076,9 +56075,9 @@
 				"poison"
 			],
 			"conditionImmune": [
-				"charmed",
-				"poisoned",
-				"unconscious"
+				"charmed|PHB",
+				"poisoned|PHB",
+				"unconscious|PHB"
 			],
 			"languages": [
 				"Common",
@@ -56093,20 +56092,20 @@
 						"The spider of Leng's innate spellcasting ability is Intelligence (spell save {@dc 14}, {@hit 6} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
-						"{@spell comprehend languages}",
-						"{@spell detect magic}",
-						"{@spell shocking grasp}"
+						"{@spell comprehend languages|PHB}",
+						"{@spell detect magic|PHB}",
+						"{@spell shocking grasp|PHB}"
 					],
 					"daily": {
 						"3e": [
-							"{@spell shield}",
-							"{@spell silence}"
+							"{@spell shield|PHB}",
+							"{@spell silence|PHB}"
 						],
 						"1e": [
-							"{@spell arcane eye}",
-							"{@spell confusion}",
-							"{@spell hypnotic pattern}",
-							"{@spell stoneskin}"
+							"{@spell arcane eye|PHB}",
+							"{@spell confusion|PHB}",
+							"{@spell hypnotic pattern|PHB}",
+							"{@spell stoneskin|PHB}"
 						]
 					},
 					"ability": "int"
@@ -56122,13 +56121,13 @@
 				{
 					"name": "Poisonous Blood",
 					"entries": [
-						"An attacker who hits a spider of Leng with a melee attack from within 5 feet must make a successful {@dc 15} Dexterity saving throw or take 7 ({@damage 2d6}) poison damage and be {@condition poisoned} until the start of its next turn."
+						"An attacker who hits a spider of Leng with a melee attack from within 5 feet must make a successful {@dc 15} Dexterity saving throw or take 7 ({@damage 2d6}) poison damage and be {@condition poisoned|PHB} until the start of its next turn."
 					]
 				},
 				{
 					"name": "Shocking Riposte",
 					"entries": [
-						"When a spider of Leng casts {@spell shield}, it can also make a shocking grasp attack for 9 ({@damage 2d8}) lightning damage against one enemy within 5 feet as part of the same reaction."
+						"When a spider of Leng casts {@spell shield|PHB}, it can also make a shocking grasp attack for 9 ({@damage 2d8}) lightning damage against one enemy within 5 feet as part of the same reaction."
 					]
 				}
 			],
@@ -56148,13 +56147,13 @@
 				{
 					"name": "Spit Venom",
 					"entries": [
-						"{@atk rw} {@hit 6} to hit, range 60 ft., one target. {@h}16 ({@damage 3d8 + 3}) poison damage, and the target must make a successful {@dc 14} Constitution saving throw or be {@condition poisoned} and {@condition blinded} until the end of its next turn."
+						"{@atk rw} {@hit 6} to hit, range 60 ft., one target. {@h}16 ({@damage 3d8 + 3}) poison damage, and the target must make a successful {@dc 14} Constitution saving throw or be {@condition poisoned|PHB} and {@condition blinded|PHB} until the end of its next turn."
 					]
 				},
 				{
 					"name": "Staff of Leng",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}9 ({@damage 2d6 + 2}) bludgeoning damage plus 13 ({@damage 2d12}) psychic damage, and the target must make a successful {@dc 15} Wisdom saving throw or be {@condition stunned} until the start of the spider's next turn."
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}9 ({@damage 2d6 + 2}) bludgeoning damage plus 13 ({@damage 2d12}) psychic damage, and the target must make a successful {@dc 15} Wisdom saving throw or be {@condition stunned|PHB} until the start of the spider's next turn."
 					]
 				}
 			],
@@ -56185,14 +56184,14 @@
 				"RW"
 			],
 			"conditionInflict": [
-				"blinded",
-				"poisoned",
-				"stunned"
+				"blinded|PHB",
+				"poisoned|PHB",
+				"stunned|PHB"
 			],
 			"conditionInflictSpell": [
-				"charmed",
-				"deafened",
-				"incapacitated"
+				"charmed|PHB",
+				"deafened|PHB",
+				"incapacitated|PHB"
 			],
 			"savingThrowForced": [
 				"constitution",
@@ -57612,27 +57611,27 @@
 							"rows": [
 								[
 									"1",
-									"Slowing Ray. The targeted creature must succeed on a DC 16 Dexterity saving throw. On a failed save, the target’s speed is halved for 1 minute. In addition, the creature can’t take reactions, and it can take either an action or a bonus action on its turn, not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+									"Slowing Ray. The targeted creature must succeed on a {@dc 16} Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. In addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn, not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 								],
 								[
 									"2",
-									"Lightning Bolt. A lightning bolt arcs from the syanngg’s eye, forming a 5-foot-wide line that is 120 feet long. Each creature in this area must make a DC 16 Dexterity saving throw, taking 42 (12d6) lightning damage on a failed save, or half as much on a successful one."
+									"Lightning Bolt. A lightning bolt arcs from the syanngg's eye, forming a 5-foot-wide line that is 120 feet long. Each creature in this area must make a {@dc 16} Dexterity saving throw, taking 42 (12d6) lightning damage on a failed save, or half as much on a successful one."
 								],
 								[
 									"3",
-									"Antimagic Ray. The syanngg’s eye creates an area of antimagic, as in the antimagic field spell, in a 120 foot cone."
+									"Antimagic Ray. The syanngg's eye creates an area of antimagic, as in the antimagic field spell, in a 120 foot cone."
 								],
 								[
 									"4",
-									"Petrification Ray. The targeted creature must make a DC 16 Dexterity saving throw. On a failed save, the creature begins to turn to stone and is restrained. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified until freed by the greater restoration spell or other magic."
+									"Petrification Ray. The targeted creature must make a {@dc 16} Dexterity saving throw. On a failed save, the creature begins to turn to stone and is restrained. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified until freed by the greater restoration spell or other magic."
 								],
 								[
 									"5",
-									"Paralyzing Ray. The targeted creature must succeed on a DC 16 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+									"Paralyzing Ray. The targeted creature must succeed on a {@dc 16} Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 								],
 								[
 									"6",
-									"Charm Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or be charmed by the syanngg for 1 hour, or until the syanngg harms the creature."
+									"Charm Ray. The targeted creature must succeed on a {@dc 16} Wisdom saving throw or be charmed by the syanngg for 1 hour, or until the syanngg harms the creature."
 								]
 							]
 						}
